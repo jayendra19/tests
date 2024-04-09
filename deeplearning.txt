@@ -1,0 +1,800 @@
+what is rag?
+rag is retrival augomantic genrated app.this is very useful for when ur having ur own multiple data.like alot text data.
+
+when to use rag and fine tuning free llm models?
+when i use fine tuning when im having specific data that world does not have or not availbel non internet then i use fine tuning for my model
+other then we can use rag.its very cheap 
+
+what is fine tuning?
+when i have open source models like llam2 or gpt2 and then i train on specific data sets to allow to get better allowing to do specific task 
+
+what is ai?
+an application that work on its own without any human intervantion.like netflix app that give good recomondation.
+
+what is ml?
+ml is subset of ai that provide statistical tool to analyze the data and to vizualize the data and we're able to predict,forcasting and do clustering.
+
+
+what is data lake?
+A data lake is a centralized repository designed to store, process, and secure large amounts of structured, semi-structured, and unstructured data. Here are the key points:
+
+
+what is dl?
+deep learning is subset of ml.deep learning is used to mimic the human brain.using perceptron single layer of neural network multi layered neurl network.
+
+what is perceptron?
+perceptron is nothing but single layer of neural network.having single layer of neural network means it is used for only basic task like yes or no spam or ham.Learns linear relationships between input features and output.
+example: suppose im having 4 columns that will become my input layer and i will have single hidden layer that will only one nuron and one output neuron. and having ,multiple hiden layers that means multilayered neural network Function: Handles complex relationships and non-linear patterns in data.
+Single-layer: Simple, linear, and limited to basic tasks.
+Multilayer: Complex, non-linear, and suitable for more challenging problems.
+
+
+why we use weights?
+weights play a crucial role in neural networks, enabling machines to process information, adapt, and make predictions. They allow the network to learn from data
+and uncover intricate patterns.
+They determine the strength of these connections and influence how much impact one neuron’s output has on another neuron’s input.
+Feature Importance: Weights allow the model to assign different importance levels to input features. Some features may be more relevant for making accurate predictions.
+Adaptability: By adjusting weights, the model adapts to the underlying patterns in the data.
+Fine-Tuning: The iterative process of updating weights fine-tunes the network’s ability to make accurate predictions.
+ 
+what is weights and biases?
+Neural Networks :
+Weights (Parameters): In neural networks, weights represent the strength of connections between neurons (nodes). Each connection has a weight associated with it.so if wheights will be initialized as zero then 
+multiplyinh with x1 and w1 will be zero so will pass zero  my hidden layer in that case will have bias. formula will be summation of xiwi+b
+Bias (Neuron Bias(intercept)): The bias term for each neuron allows the network to learn an appropriate activation threshold. It shifts the activation function left or right.
+important to remember bias will require in evry hidden layer only one bias in every hidden layer.
+Remember that these weights and biases are learned during training by minimizing the loss function.it will done automaticallty by neural network.
+
+neural network also consist of different different OPTIMIZERS LIKE ADAM RELU ETC. REMEBER DON'T CONFUSE IN THIS ACTIVATION AND OPTIMZERS.
+types of activation function :sigmoid for binary classification and softmax for multiclass classification. 
+AND ALWAYS REMEBER SIGMOID WILL GIVE PROBABILITY NOT 0 AND 1 WE HAVE TO SET THE THRESHOLD LIKE ABOVE 0.5 IS 1.
+THE MAIN FUNCTION OF SIGMOID ACTIVATION FUNCTION TO WHEATHER IS THE NEURON IS ACTIVATED OR NOT. 
+
+why to use activation function?
+Definition: An activation function calculates the output of a neuron based on its input and weights AND BIAS.
+Purpose: It introduces non-linearity into the output, allowing neural networks to learn complex patterns.
+Example: Imagine a neuron deciding whether an email is spam (1) or not (0) based on features like word count, sender, etc.
+activation functions allow neural networks to learn complex relationships, make decisions, and adapt during training. They inject non-linearity, making neural 
+networks powerful tools for various tasks.
+1.non linearity  Activation functions introduce non-linearity into the output of a neuron. Why?: Without non-linearity, a neural network would behave like a linear model, limiting its ability to learn complex patterns
+2.Decision Threshold: Role: Activation functions decide whether a neuron should be activated (fire) or not.In a binary classification task, the activation function helps decide whether an input belongs to class A or B.
+3.Back-Propagation: Learning: Activation functions enable back-propagation by providing gradients for weight updates during training.Example: When training a neural network, gradients are essential for weight optimization.
+
+WHAT IS LOSS FUNCTION?
+IT WILL GIVE THE DIFFERENCE BEYWEEN ACTUAL AND PREDICTED VALUE MY MAIN FOCUS SHOULD ALWAYS TO MINIMIZE IT.AND IF MY DIFFEENCE WILL BE HUGE THEN I HAD TO DO 
+BACK PROPGATION.
+
+#important
+the forward propogation?
+so we took the inputs muLTIPLY BY THE WEIGHTS AND ADDED BIAS AND ACTIVATE IT BY ACTIVATION FUNCTION.IS CALLED THE FORWARD PROPGATION.
+
+THE BACK PROPGATION?
+THE MAIN FOCUS IS FOR BACK PROPGATION IS TO UPDATING WEIGHTS.ONLY UPDATING WEIGHTS THEN ONLY WE ABLE TO GET PREDICTED OUTPUT MATCHED IF IM HAVING 0 WHEN DOING 
+MY CLASSIFICATION PROBLEM AND MY ACTUAL VALUE IS 1 THEN WE DO BACK PROPGSTION AND TO MINIMIZE IT AND MAKE IT CLOSE TO 1.
+
+AND HOW THIS BACK PROPGATION HAPPENED?
+THE BACK PROPGATION HAPPENED WITH THE HELP OF OPTIMIZERS.THIS OPTIMIZER MAKE SURE THAT EACH AND EVERY WEIGHT WILL UPDATED WHILE WE ARE BACK PROPGATING. 
+
+#IMPORTANT
+THIS IS WHOLE TRAINING PROCESS.
+INPUT LAYER ADDED
+WEIGHTS ADDED AND BIAS ADDED
+ACTIVATION this activation will have y means the output and this if using sigmoid it will convert my value into 0 to 1 
+THAT IS MY WHOLE FORWARD PROPOGATION.
+
+LOSS FUNCTION CALCULATED Y-Y(HAT) IF THE DIFFEREN HUGE
+WE MINIMIZE IT WITH OPTIMIZERS IT UPDATES THE WEIGHTS.
+THIS IS MY WHOLE BACKWARD PROPOGATION.
+
+what is transfor learning?
+transfor learning involves training model for one task reusing it for rrelated tasks.
+instead of building model from scratch pretuned model like bert and elmo are fine tuned for specisific nlp tasks.this approach allow faster nlp
+task completions.
+
+what is weight updation formula?
+wnew=wold-learning rate * derivative loss upon derivative of wold.and this derivative is slope.so using this it will create a tangent and if i got negative with help of negative slope value im able to increase my weights.
+value and i put it in my formula then it will be wold-learning rate(-value)and it will become positive - - + at the end of the day my wnew will always be greater then wold.
+same with postive slope if i got positve value and if i calculate it then - + become - and at the end of the day my wnew will less than wold. cuz it will in negative.
+MOST IMPORTANT TO UPDATE FOR EVERY HIDDEN LAYERS WEIGHTS WE CHAIN RULE OF DIFFERENTIATION.U HAVE TO JUST START FROM LAST TILL 1.THAT'S WHY WE CALLED THIS BACK PROPGATION.
+
+#SUPER IMPORTANT QUESTION FOR DEEP LEARNING INTERVIEW
+WHAT IS VANISHING GRADIENT PROBLEM?
+the important properties of sigmoid function is whenver we try to find out the derivative of sigmoid it will be ranging between 0 to 0.25.beacuse of this what will happen?in evry
+output when doing back propgation we used sigmoid activation function the value will always will ranging 0 to 0.25 if u use sigmoid activation and doing weight updation and finding weight for w1 then
+ill have to calulate the derivative of derivative of loss upon derivative of w1 and in that we use chain rule of derivative to calculate the the new weights in that suppose im having 4 hidden layers and got the output 
+for 1 output i got 0.25 a for second i got 0.15 and for third i got 0.6 and it is going to reduced at the end of chain. so now what will happen beacuse of this if u multiply this smaller value don't u think after multiplyinh
+we'll have VERY  smaller value.now after getting it this smaller value ill update my weights.so my formula will wnew=wold-l(learningrate its is also small)*weight(smaller weight) so over all after caluculating AT SOME POINT MY
+MY WNEW==WOLD(IT WILL HARDLY CHANGE) AND IF ITS HARDLY CHANGING BASICALLY WEIGHTS ARE NOT GETTING UPDATED AND THIS SITUATION WHERE WEIGHTS ARE NOT UPDATING MEAN HARDLY UPDATING THIS PROBLEM IS CALLED VANISHING GRADIENT PROBLEM
+(NO CHANG IN WEIGHTS MEANS VANISHING GRADIEN PROBLEM)
+#CHATGPT ANSWER
+The vanishing gradient problem is associated with certain activation functions, especially sigmoid and hyperbolic tangent (tanh).
+These activation functions have derivatives that fall within specific ranges:
+Sigmoid: Derivatives range from 0 to 0.25.
+Tanh: Derivatives range from 0 to 1.
+When inputs fall in saturated regions (very small or large values), the gradients approach zero.
+As more layers are added, these small gradients multiply between layers and decay significantly.
+Consequently, the weights of the initial layers receive little or no update during optimization.
+This slow weight update in the first layer hinders overall model performance and can lead to convergence failure.
+In summary, the vanishing gradient problem affects deep networks due to the behavior of certain activation functions, leading to slow weight updates and hindered training.
+
+HOW TO SOLVE THIS VANISHING GRADIENT PROBLEM ?
+USE ANOTHER ACTIVATION FUNCTION.LIKE TANH(IN THANH MY RANGES BETWEEN -1 TO 1 AND THERE'S STILL A CHANCE FOR VANISHING GRADIENT PROBLEM),RELU(RELU MEANS RCTIFIED LINEAR UNIT IT SOLVED THE VANISHING 
+GRADIENT PROBLEM AND BETTER THAN SIGMOID AND BETTER THE TANH ITS QUICKER BUT WHEN THE INPUT IS NEGATIVE RELU IS COMPLETELY IN ACTIVE THE LAYER WILLBE DEAD),LIKIRELU(IN THIS ILL HAVE 
+0.01 VALUE IT WILL NEVER BE ZERO AND ITS SOLVING THE DAED NEURON PROBLEM.),PRERELU
+KEY THING TO REMMBER WE CAN ALSO ACTIVATION FUNCTION IN EVRY HIDDEN LAYER AND USE SIGMOID FOR OUTPUT LAYER MOSTLY USE CLASSIFICATION.
+
+NOW WHICH ACTIVATION SHOULD WE USE ?
+SUPPOSE IM DOING BINARY CLASSIFICATION IN HIDDEN LAYER USE RELU ACTIVATION FUNCTION AND IN OUTPUT LAYER USE SIGMOID ACTIVAION FUNCTION ITS ALWAYS USE SIGMOID ACTIVATION FUNCTION.
+AND FOR REGRESSION WE USE LINEAR ACTIVATION FUNCCTION.AND ITS HAVE ITS OWN LOSS FUNCTION
+
+WHY IS THAT IF IM DOING BINARY CLASSIFICATION I HAVE TO USE SIGMOID IN MY OUTPUT LAYER BUT IN MY HIDDEN LAYER IM USING RELU?
+Summary:
+ReLU in hidden layers allows efficient training and better gradient flow.
+Sigmoid LOSS FUNCTION IS BINARY CROSS ENTROPY (or softmax sparse_categorical_crossentropy) in the output layer ensures meaningful predictions for binary (or multiclass) classification.
+
+WHAT IS DIFFERENCE BETWEEN LOSS AND COST FUNCTION?
+SUPPOSE I HAVE 100 RECORDS AND IN FORWARD PROPGATION I PASS ONE RECORDS AND I CALCLULAYE Y HAT AND CALCULATE LOSS Y-YHAT.
+AND IN COST WE PASS BATCH SIZE LIKE SUPPOSE IM PASSING 10 RECORDS AT EVERY FORWARD PROPGATION PASSED 10 RECORDS AND WHEN PASSING 10 RECORDS THEN I CALCULATE THE 
+LOSS FOR 10 RECORDS THE FORMULA WILL CHANGE AND WE'LL CALL IT COST.
+FORMULA FOR LOSS 1/2(Y-YHAT)
+COST 1/2 E(SUMMATION) I=1 N(Y-YHAT)WHOLE SQUARE 
+
+
+WHAT IS LOSS FUNCTION?
+THE PRIMARY ROLE FOR LOSS FUNCTION IS TO QUANTIFY THE ERROR BETWEEN MODELS PREDICTION AND THE ACTUAL TARGET VALUES.
+Imagine training a model to predict car prices based on historical data. The loss function evaluates how well the neural network’s predictions align with the actual car prices in the training dataset.
+WE HAVE TWO THNG REGRESSION AND CLASSIFICATION .WE HAVE LOSS FOR REGRESSION MSE(MEANS SQYUAD ERROR) MAE(MEAN ABSOLUTE ERROR) HUBER LOSS (COMBINATION OF MAE AND MSE.)
+CLASSSIFICATION IM HAVING BINARY CORROSS ENTROPY -BINARY CLASSSIFICATION AND CATEGORICAL CROSS ENTROPY -MULTICLASS CLASSIFICATION.
+FORMULA= LOSS=-Y*LOG(YHAT)-(1-Y)*LOG(1-YHAT)#LOGISTIC REGRESSION 
+
+WHAT IS OPTIMIZERS?
+OPTIMIZERS BACSICALLY USED FOR MINIMIZING THE ERROR ALSO KNOW AS LOSS  between the model’s predictions and the actual target values.
+Optimizers play a crucial role in this process by iteratively updating the model’s parameters to improve its performance.
+In summary, optimizers are essential for fine-tuning machine learning models, adjusting their parameters, and minimizing errors
+example of optimizers like graduent decent(we can pass millions of records at a time ),stochastic gradient descent(in this we're passing one record at a time and if i have millons record it will millons iteration
+convergence will be very very slow), mini batch gradient descent(in mini batch we provide the bacth so the number of iteration is reduced
+and its not resource intensive,convergence will be better,time complexity will reduce for removing noice we use momentum).4.sgd with momentum(in this we have
+exponential weighted average it removing the noice smothing curve.) Adagrade(adaptive gradient decent in this in weight updation formula we have learning rate and that is fixed in evry algorithm and optimizers it helps
+to maintain the speed of convergence can we change the learning rate initally my learning would be high as we go toward go to global minima it should deacrese)
+adam(its a combintion of momentum and rmsprop its havng adaptive learning rate this is best optimizers )
+
+how to reduce noice ?
+try to add some smoothing factors in my optimizers.
+
+if we have noice it will take long to come global minima.mini batch sgd give less noise and sgd give a lot noice that's why it take a lot to come to global minima.
+
+
+which algorithm require feature scaling?
+remember when we have to caluclte distance in that case we required feature scaling basically distance based algorithm.where ever gradient descent and optimizers involved weights and biases.
+
+what is sequential?
+if i want to take entire neural network at once do forward and backward propgation with the help of sequential we can do that.
+
+what is dense layer?
+dense is used to create nurons input layers we're able to create input layer hidden layer output layer.
+
+why we use drop out ?
+drop out is used when we don't want my model to be overfitted if use dropout(0.3) means my 30 percent neurons deactivate while traning it will randomly select those.
+
+
+#IMPORTANT
+WHAT IS REGULARIZATION?
+Regularization in machine learning is a crucial technique used to prevent overfitting and enhance the performance of models. Let’s explore it further:
+
+Purpose of Regularization:
+Overfitting: When a model becomes too specialized to the training data, it may perform poorly on unseen data. Overfitting occurs when the model memorizes noise rather than learning underlying patterns.
+Underfitting: Conversely, underfitting happens when the model fails to capture essential patterns in the dataset.
+Role of Regularization:
+Complexity Control: Regularization helps control model complexity by preventing overfitting to training data. It encourages better generalization to new data.
+Preventing Overfitting: By adding a penalty term to the loss function, regularization discourages the model from assigning excessive importance to individual features or coefficients.
+Balancing Bias and Variance: It strikes a balance between model bias (underfitting) and model variance (overfitting), leading to improved performance.
+Feature Selection: Some regularization methods promote sparse solutions, automatically selecting important features while excluding less significant ones.
+Handling Multicollinearity: When features are highly correlated, regularization stabilizes the model by reducing coefficient sensitivity to small data changes.
+Generalization: Regularized models learn underlying patterns for better generalization instead of merely memorizing specific examples12.
+Types of Regularization:
+L1 Regularization (Lasso): Encourages sparse solutions by driving some feature coefficients to zero.
+L2 Regularization (Ridge): Penalizes large coefficients, constraining their magnitudes.
+Elastic Net: Combines L1 and L2 regularization.
+Impact:
+Regularization makes models stable across different subsets of data.
+It reduces sensitivity to minor changes in the training set.
+Crucial when dealing with limited data or noisy environments134.
+In summary, regularization ensures that models strike the right balance between complexity and generalization, leading to robust and reliable predictions.
+
+
+
+#important
+WHAT IS OVERFITTING?
+FOR TRAINING MY MODEL'S ACCURACY IS BEST AND WHEN I DO TEST ON MY SAMPLE DATA ACCURACY IS LOW.SO IN DEEP LEARNING WHEN USING NEURAL NETWRK WE USE DROPOUT
+TO AVOID OVERFITTING OR INTRODUCE NEW DATA USE EARLY STOPING.
+
+WHAT IS EPOCHS?
+SUPPOSE I DO ONE FORWARD AND BACKWARD PROPGATION THAT IS ONE EPOCHS.SUPPOSE IF HAVE 1000 RECORDS
+An epoch represents a full iteration through the entire training dataset during model training.
+For example, if you have a dataset with 1000 samples and a batch size of 100, each epoch would consist of 10 iterations (since there are 10 batches).
+An iteration refers to the process of:
+Processing a batch of data through the model.
+Calculating the loss (error) based on the model’s predictions.
+Updating the model’s parameters (weights and biases).
+
+what is early stpping?
+when my monitered value or my metrics like accruacy is stoped improving that's and suppose we're having early stoping set to 1000 without early stping 
+it will complete whole epochs and take resources and time.
+
+what is white and black box models?
+white box models is where we can see what's happening suppose linear regression is white box model but random forest is back box model ann is black box model
+xgboosst is black box model cuz internal working we can not check.
+
+
+#NOW DOING RNN nlp
+FIRST STEPS
+TOKKENIZATION?CONVERTING SENTENCES INTO WORDS
+LOWER THR WORDS
+STOPWRDS?LIKE TO OF GO THE 
+LEMMETIZATION AND STEMING? HISTORICAL AND HISTORY THE LEMETIZATION WILL CONVERT INTO ITS BASE WORDS HISTORY.IF U USE STEMING IT WILL CONVERT HOSTORI THERE WILL NO BE MEANING.
+USE STEMING WHERE WE DON'T NEED TO HAVE MEANING OF WORDS LIKE WE CAN USE IT IN SPAM CLASSIFICATION AND WHEN WE USE STEMING WEHEN WE HAVE TO KEEP MEANING OF WORDS
+WE CAN USE IN TEXT SUMMARIZATION AND LANGUAGE TRANSLATION.CHATBOT WHERE WE NEED WORDS TO KEEP MEAN. 
+
+WHY WE USE NER?
+TO CLASSIFY ENTITTES INTO PREDIFINED LABELS
+
+CORPUS MEANS PARAGRAPHS
+DOCUENTS MEANS SENTENCES
+VOCABULARY MEANS COLLECTION OF DISTINCTS WORDS THAT ARE PRESENT IN MY DATASETS.
+
+after text preprocessing next step 
+CONVERT WORDS INTO VECTORS using BAG OF WORDS,TFIDF(TERM),WORD2VEC AND AVGWORD2VEC
+
+WHAT IS FEATURE EXTRACTION?
+Feature extraction is a fundamental process in machine learning and natural language processing (NLP). It involves transforming raw data (such as text, images, or other types) into a set of relevant features that can be used 
+for modeling or analysis. The goal is to represent the data in a more compact and informative way, capturing essential patterns and characteristics.
+Feature extraction refers to the process of selecting or creating relevant features from raw data.
+These features serve as input variables for machine learning models.
+The bag-of-words model is a text representation technique.
+
+Why Feature Extraction?:
+Raw data can be high-dimensional, noisy, or redundant.
+Extracting meaningful features simplifies the data representation and improves model performance.
+It also reduces computational complexity.
+
+DOING ONE HOT ENCODING:
+ADVANTAGES:ITS SIMPLE,INTUTIVE
+DISADVANTAGES:SPARSE MATRIX IT WILL TAKE MORE COMPUTATIONAL POWER.2.OUTOF VACUBULARY EXTRA WORDS THAT ARE PRESENT IN TEST DATA IF THAT WILL COME MY VOCABULARY 
+DOSENT HAVE THEN THIS PROBELM WILL ARISE(ALWAYS WHEN TRAINING A MACHINE LEARNING MODEL THE INPUT WILL BE FIX THAT MANY NUMBER
+OF FEATURE WILL BE THERE LIKE 10 FEATURE SO THERE WILL BE 10 FEATURE BUT WHEN DOIN NLP WE CAN HAVE SENTENCES OF DIFFERENT DIFFEFENT SIZE LIKE ONE SENTENSE HAVE 4 WORDS
+BUT OTHER ONE HAVE ONLY 3 WORDS THAT WE CALL OUT OF VOCABULARY.WE CAN NOT TRAIN THE MODEL IN THAT CASE)3.BETWEEN THE WORDS SEMANTIC MEANING IS NOT CAPTURED CUZ OF SPARSE USING 
+0 AND 1 THERE ARE NO RELATION SHIP.
+
+NOW DOING BAG OF WORDS(IN SKLEARN THERE'S LIBRARY CALLED COUNTVECTORIZER(BINARY=tRUE,NGRAM=(3,3))):IF I DO THIS 2,3 I WILL GENERTE BOTH BIGRAMA ND TRIGRAMTOO.
+in bag of words it count the frequency of numbers that how many time they present in the sentences.suppose if im having 3 unique words in each sentences that will become my columns and in that there will be number that they appear most of the time.
+whenever there will be additional words i will increase the count or we can use BINARY BAG OF WORDS WHAT IT WOULD DO INSTEAD INCREASING COUNT it just WRITE A 1 THAT MEANS 
+ADVANTAGES:SIMPLE AND INTUTIVE
+DISADVANTAGES:SPARSE CITY STILL A PROBLEM ,STILL WE HAVE OUT OF VOCABULARY PROBLEM. IMPORTANT THE ODERING OF WORDS HAS COMPLETELY CHANGE HERE ITS WE COUNTING THE FREQUENCY THAT'S WHY.
+NOT ABLE TO CAPTURE THE SEMANTIC RELATIONSHIP
+BAG OF WORDS-->TEXT-->VECTORS
+SO I HAVE TWO SENETENSE LIKE THE FOOD IS GOOD AND THE FOOD IS NOT GOOD AND IF I CONVERT INTO BAG OF WORDS THEN IT WILL SO IT WILL HAVE DISTINCT WORDS IN THE VOCABULARY
+SO ILL HAVE FOR 1ST DOC ILL HAVE 1 1 1 0 1 AND FOR SECOND 1 1 1 1 1 SO IF ULL SEE AND IF CALCULATE THE SIMILARITY WE'LL HAVE 
+VERY CLOSE SIMILARITY BUT IN REAL ITS NOT SAME AT ALL ITS OPPOSITE.
+SO TO SOLVE THIS WE USE TFIDF(TERM FREQUENCY INVERSE DOCUMENT REQUENCY.)
+
+TO CAPTURE THE SEMANTIC RELATIONSHIP WE USE NGRAMS:
+THERE BIGRAMS AND TRIGRAMS AND NGRAMS SO WHAT IT DO ACTUALLY INSTEAD OF SINGLE WORD it do TWO WORDS AT A TIME THAT CALL BIGRAMS
+
+
+TFIDF:
+SO TFIDF PROVIDES WEIGHTEGE TO WORDS ON THE BASIS OF THERE FRQUENCY MORE FREQUNCY MEANS MORE WIGHTAGE TO WORD RARE WORDS MEANS LESS FREQUNCY.
+RARE WORDS CAPTURE BY TERM FREQUENCY AND COMMAN WORDS GET CAPTURED BY INVERSE DOCUMENT FREQUNCY.WHEN WE COMBINE BOTH OF THEM WE'LL ABLE TO FIND OUT
+MOST RARE WORDS TERM FREQUNCY FORMULA: NO OF REPETATIO OF WORD IN SENTENSCE DIVIDED BY NO OF WORDS IN SENTENSCE
+IDF=LOGC(NO OF SENTENCES DIVIDED BY NO OF SENTENCES CONTAINING THE WORD) AFTER MULTIPLYING BOTH WE'LL HAVE OUR TFIDF.
+ADVANTAGES:
+INTUTIVE
+BUT HERE WE'RE CAPTURING WORD IMPORTANCE
+
+DISADVANTAGES:
+SPARSESITY WILL BE THERE IF MY VECTORS ARE VERY HUGE.ITS REDUCING COMPARE TO BAG OF WORDS.
+STILL OF OUT OF VOCABULARY
+
+
+
+WHAT IS WORD EMBEDDING ?
+ITS A TECHNIQUE WHICH CONVERTS words INTO VECTOR.
+WORD EMBEDDING HAVE TWO TECHNIQUE 1.COUNT OR FREQUENCY(BOW,TFIDF,OHE) 2.DEEP LEARNING TRAINED MODELS(WORD2VEC(CBOW AND SKIPGRAMS),AVGWORD2VEC WHENVER USING THIS WE HAVE TO CREATE EMBEDDING LAYERS.)
+
+WORD2VEC:
+FOR EVERY WORD WE TRY TO CREATE VECTORS.FOR EVERY WORD ITS HAVE ITS FEATURES FIXED FEATURES THESE FEATURES IS CREATED BY THE MODEL.
+IF WE'RE CREATING WORD2VEC WE'LL HAVE LIMITED DIMENSION LIKE 100 OR 200 DIMENSION WITHIN THAT NUMBER OF DIMENSION I WILL ABLE TO REPRESENT THE ENTIRE WORD.
+SPARSITY IS REDUCED.
+SEMANTICS MEANING IS MAINTAINED
+
+WHAT IS COSINE SIMILARITY?
+DISTANCE=1-COSINE SIMILARITY
+COSINE SIMILARITY=COS THETA HERE WE'RE JUST FINDING ANGLE BETWEEN TWO POINTS.
+
+NOW USING CBOW(CONTINEUES BAG OF WORDS)
+FIRST I NEED TO DECIDE WINDOW SIZE SUPPPOSE IT WILL BE 5 IF IM HAVING A SENTENSE SO IT WILL TAKE 5 WORDS AND IT WILL HAVE CENTER WORD IN THIS KRISH CHANNEL IS READY TO BLAST BOOM SO IT WILL TAKE 5 WORDS AND THE CENTERED WORD WILL IS
+SO THAT WILL BECOME MY TARGET AND THE OTHER 4 WORDS WILL BECOME  INDEPENDENT FEATURE SO LIKE THIS IT WILL DO FOR SAME .
+REMEBER THE MORE WINDOW SIZE THE MORE MODEL BECOME ACCURATE. so if we have window size 5 so middle word become my output andother have words count 4 so every time my input featires have 4 words all the time.
+so my imput is 4 and im respresnting each word with vector of 7 words.
+startigis is simple if 5 is window size then my hiden layer with that number of nodes. 
+important cbow is type of word2vec
+USING GENSIM LIBRARY WE HAVE GOOGLE PRETRAINED MODEL AND WE CAN TRAIN MODEL FROM SCRATCH.
+THERE'S A PROBLEM BUILDING MODEL FROM SCRATCH SO IT WILL CREATE 300 DIMENSION FOR EACH WORD SUPPOSE IM HAVE SENTENCES OF 4 WORDS EACH OF THOSE HAVE 300 DIMENSIONS FOR EACH WORDS THE 
+PROBLEM IS I WANT TO HAVE VECTOR FOR MY ENTIRE SENTENCE i want my entire sentence converted into 300 dimensions SO IN THAT CASE WE USE AVGERAGE WORD2VEC.SO MY WHOLE SENETNCES OR SAY DOCUMENT IS MY 1 INPUT SO I WANT TO CONVERT THAT INTO 300 
+DIMENSION MAIN GOAL IS THAT.
+
+WHY TO USE WORD2VEC?
+ITS GOOD AT CAPTURING SEMANTIC RELATIONSHIP
+REDUCING SPARSITY AND REDUCING DIMENSIONS.
+its also preserve sequence of words
+
+how its works avgword2vec?
+so if im having 4 words if i use word2vec then it will create 300 dimensions for every word what i do is for evry diminsion for each word ill take the avaerage supose im having 4 words 
+and those hving 300 dimensions each for each dimension ill take the average so thar's how ill have 300 dimensions for whole word and we'll have new wvector of whole sentensces containing 300 dimenshins.
+its also called word embedding we can use in chatbot in this sequence of word is important
+lanugage translation hindi to english 
+and text generation like if im typing it give suggestion.
+
+#IMPORTANT
+now the question arise what wor2vec?
+word2vec is deep learning technique which we can train a model or we can use pretrained model which actually converts words into vectors.
+why this cuz semantic meaning is captured.
+
+what is the difference between train and test and validation?
+train is for training the model
+test is my unscene data its for model testing and if my model sees it then there is issue called data leakage
+validation is  from training again we split the data and have validation is used for hyperparamtere tuning.
+
+cross validation?
+means we'll if i have cv=5 that means it will conduct different different experiments 5 times.if im having 1000 dataset and have cv=5 i divide this ill have 200 that means ill have 
+200 validation data.
+
+why we use random forest instead of decision tree?
+cuz desicion tree have low bias and high variance to reduce the variance we use random forrest.
+
+Data mining is the process of extracting knowledge or insights from large amounts of data using various statistical and computational techniques. Let’s explore the fundamental aspects of data mining:
+
+RNN:ITS RECURREnT NEURAL NETWORK.IN THIS NETWROK A SINGLE NETWORK CONSIST ONE WORD OR ONE IMAGE OR FIXED LENGHT FEATURE VECTOR.
+
+TYPES OF RNN?key thing to remeber in RNN one nurons means one word or one image.
+1.ONE TO ONE RNN:IN THIS WE GIVE INPUT AND HAVE ONLY ONE OUTPUT.THIS IS USE FOR TEXT CLASSIFICATION.
+2.ONE TO MANY RNN:OF COUSE IN THIS WE HAVE ONE INPUT AND MANY OUTPUT IT WILL USE FOR MULTICLASS CLASSIFICATION.EXAMPLE:TEXT GENERATION ,GOOGLE SEARCH IN THIS ONE INPUT AND GET MANY RECOMENDATION we can use recomendartions. 
+3.MANY TO ONE RNN:this can be simple sentiment analysis we give multiple words and have one sentiment.predict next day sale.
+4.MANY TO MANY RNN:in this we have multiple input and multiple output for same example lanhiage translation,question answering,chatbot.
+
+FORWARD PROPGATION:
+IN FORWARD PROPOGATION THE NEURON HAVE ONE INPUT AND ONE OUTPUT NOW WE'RE DOING MANY TO ONE DOING SENTIMENT ANALYSIS LIKE FOOD IS GOOD TARGET VARIABLE FOR THIS POSISTIVE.
+SO EACH WORD WILL BE AS X1(THIS IS NOTHING BUT A VECTOR EACH WORD CONVERT INTO VECTOR REMEBER) AND X2 LIKE TILL X4 SUPPOSE I HAVE FOR WORDS EACH WORDS HAVE WEIGHTS ALSO FOR ONE WORD IT WILL HAVE ITS OWN OUTPUT THAT WILL PASS TO ANOTHER NEURON X2.
+SO THE FIRST OPERATION O1 THIS MY OUTPUT THIS THE COMBINATION OF WEIGHTS AND INPUT O1=X1*W1+B AND SECOND NURION MY O1 WILL PASS to second nuron or input  CUZ X2 DEPENDENT ON O1 SO THE O2=X2*W2+O1*W DASH+B SO WILL DO THIS TILL X4 AND THEN WE HAVE OUR OUTPUT LAYER IN THAN WE HAVE
+OUR ACTIVATION FUNCTION IN THE OUTPUT IF DOING BINRY SIGMOID ACTIVATION FUNCTION WE'LL HAVE THEN WE'LL HAVE OUR Y(HAT) AND LOSS ON THE BASIS OF LOSS WE'LL UPDATE OUR WEIGHTS 
+THAT IS CALLED BACK PROPGATION.
+
+WHAT IS THE DIFFERENCE BETWEEN FIT_TRANSFORM AND TRANSFORM?
+fit_transform do two operations on input data in one go which are fit the transformer as per the calculations on input data and then apply those calculations to input data
+transform: will only apply calculations on input data as per transformer.
+
+HOW CAN I CHANGE THE DISTRIBUTION IF IM HAVE SKEWEWD DISTRIBUTION I WANT TO CONVERT IT INTO NORMAL DISTRIBUTION?
+I USE BOX COX TRANSFORMATION.
+
+WHEN WE USE FIT_PREDICT?
+Use fit_predict() for clustering tasks where you need both training and cluster assignment.
+Use predict() for supervised tasks where you want to predict outcomes based on a trained model.
+
+What is difference between standardization and normalization?
+1. Normalization is basically min max scaling
+2. Values belong to [0,1] or [-1,1]
+3. Affected by outliers
+4. Useful when we don't know about distribution 
+
+1. Standardization converts data in a manner that mean of transformed data is 0 and std=1
+2. No bound on values
+3. Not much affected by outliers
+4. Useful when data distribution is normal gaussian distribution.
+
+what is data modelling?
+Data modeling is the process of creating a visual representation of either a whole information system or parts of it.
+rnn is only rememebr shot term memory its having problem with longer sentences cuz its not able to remeber them
+
+BACKPROPGATION
+FIRST WE HAVE WEIGHT UPDATION FORMULA THAT IS WNEW=WOLD-LEARNING RATE*DERIVATIVE OF LOSS UPON DERVATIVE OF WOLD 
+IN THIS LEARNING RATE IS ALREADY INITIALLIZED AND WOLD ONLY WE HAVE TO HAVE DERIVATIVE OF LOSS UPON DERVATIVE OF WOLD.
+WE KNOW BEFORE WE CALCULATE LOSS WE HAVE Y DASH WE'LL USE SIMPLE CHAIN RULE FOR DERIVATIVE OF LOSS UPON DERVATIVE OF WOLD= DERIVATIVE LOSS UPON DERIVATIVE OF YHAT INTO DERIVATIVE OF YHAT UPON DERIVATIVE OF WOLD.
+NOW REMEMBER IF IM DOING BACK PROPGATION I HAVE TO DEPENENT FIRST ON Y HAT THEN I HAVE TO DEPENDENT O4 THEN W. THEN IT WILL BE 
+DERIVATIVE OF LOSS UPON DERVATIVE OF W=DERIVATIVE LOSS UPON DERIVATIVE OF YHAT INTO DERIVATIVE OF YHAT UPON DERIVATIVE O4 INTO DERIVATIVE OF O4 UPON DERIVATIVE OF W.
+WHAT WILL HAPPEN WE USE RNN AND SUPPOSE MY SENTENCE IS TOO LONG AND IM USING SIGMOID ACTIVATION IN THAT CASE THE VANISHING GRADIENT PROBLEM IF U REMEBER THE ACTUAL OUTPUT IS 0 TO 1 BUT IF WE CALCULATE 
+DERIVATIVE ITS RANGING BEETWEEN 0 TO 0.25 BEACUSE OF THAT IF MY SENTENCE IS TOO LONG MY WEIGHTS WILL KEEP GETTING SMALLER BECAUUSE OF THE WEIGHTS IS EQUAL TOO OLD WEIGHTS. FOR RESOLVING THIS WE'LL USE LSTM RNN.
+WHY WE USE CUZ RNN IS NOT ABLE TO REMBER THE CONTEXT OF THE TEXT CUZ OF DEEP RNN WHEN WE HAVE LONG TEXT.
+
+Lstm rnn have?
+forget layer:in this if context swithch is not happeing then it will go to memoey cell cuz in this layer im having sigmoid activation if context switched then it will have 0 and if not value will closer to 1.
+input layer:input layer is used what new infromation need to be added.
+memory cell:in this layer we add info and remove info.
+output gated layer:
+
+
+what is the range of all activation layers?
+Linear Activation Function:
+The linear function has the equation similar to that of a straight line: (y = x).
+Range: (-\infty) to (+\infty).
+Sigmoid (Logistic) Activation Function:
+The sigmoid function has an S-shaped curve: (f(x) = \frac{1}{1 + e^{-x}}).
+Range: (0) to (1).
+The output is always bounded within this range, making it useful for binary classification.
+Hyperbolic Tangent (Tanh) Activation Function:
+Tanh is similar to the sigmoid but centered at zero: (f(x) = \frac{e^x - e{-x}}{ex + e^{-x}}).
+Range: (-1) to (1).
+It’s often used in hidden layers of neural networks.
+Rectified Linear Unit (ReLU):
+The ReLU function is widely used: (f(x) = \max(0, x)).
+Range: (0) to (+\infty).
+It doesn’t activate all neurons simultaneously, aiding in sparse activations.
+Leaky ReLU:
+Leaky ReLU introduces a small slope for negative values: (f(x) = \max(\alpha x, x)) (where (\alpha) is a small positive constant).
+Range: (-\infty) to (+\infty).
+Parametric ReLU (PReLU):
+PReLU generalizes Leaky ReLU by allowing the slope to be learned during training.
+Range: (-\infty) to (+\infty).
+Exponential Linear Unit (ELU):
+ELU combines the benefits of ReLU and Leaky ReLU: (f(x) = \begin{cases} x & \text{if } x > 0 \ \alpha(e^x - 1) & \text{otherwise} \end{cases}).
+Range: (-\infty) to (+\infty).
+Swish Activation Function:
+Swish is a self-gated activation function: (f(x) = x \cdot \sigma(\beta x)) (where (\sigma) is the sigmoid function).
+Range: (-\infty) to (+\infty).
+Softmax Activation Function:
+Softmax converts a vector of real numbers into a probability distribution: (f(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}) (for each element (x_i)).
+Range: (0) to (1) (sum of all probabilities is (1)).
+Used for multiclass classification.
+
+
+how lstm remeber the context?
+The Problem of Long-Term Dependencies:
+In traditional recurrent neural networks (RNNs), a single hidden state is passed through time. However, this can make it difficult for the network to learn long-term dependencies.
+Consider sequences where relevant events are far apart in time. RNNs struggle to retain context over such extended gaps.
+Introducing LSTM:
+LSTMs address this problem by introducing a memory cell (also known as an LSTM cell).
+The memory cell acts as a container that can hold information for an extended period, allowing the network to capture long-term dependencies.
+The Role of Gates:
+LSTMs use a gating mechanism to selectively recall or forget information.
+The memory cell is controlled by three gates:
+Input Gate: Determines what information to add to the memory cell.
+Forget Gate: Controls what information is removed from the memory cell.
+Output Gate: Manages what information is output from the memory cell.
+
+
+WHAT IS COSINE SIMILARITY?
+Cosine similarity is a measure of how similar two vectors are, based on the angle between them. It is calculated by dividing the dot product of the vectors by the product of their lengths. It ranges from -1 to 1, where -1 means opposite, 0 means orthogonal, and 1 means identical. Cosine similarity is useful for comparing texts, images, or other types of data that can be represented as vectors12.
+
+For example, suppose we have two sentences, A and B, and we want to measure their similarity using cosine similarity. We can first convert the sentences into vectors, using a tool such as Google Generative AI Embeddings3. Then, we can apply the formula for cosine similarity:
+
+cosine_similarity(A, B) = A . B / ||A|| ||B||
+
+where A . B is the dot product of the vectors, and ||A|| and ||B|| are the lengths of the vectors. The result will be a number between -1 and 1, indicating how similar the sentences are in terms of their meaning and topic.
+
+WHAT IS SIMILARITY SCORE?
+It seems like you are interested in learning about similarity score, which is a measure of how much two texts or documents match each other. Similarity score is often used in plagiarism detection, text analysis, or information retrieval.
+
+There are different ways to calculate similarity score, depending on the method and the tool that you use. One common way is to use cosine similarity, which compares the angle between two vectors that represent the texts or documents. Another way is to use Jaccard similarity, which compares the overlap between two sets of words or characters that represent the texts or documents12.
+
+The similarity score is usually expressed as a percentage, ranging from 0% to 100%. A higher percentage means a higher similarity, and a lower percentage means a lower similarity. For example, if the similarity score between two texts is 50%, it means that half of the content in one text is found in the other text.
+
+What is NLP?
+NLP stands for Natural Language Processing. It involves developing algorithms to enable machines to understand, interpret, and generate natural languages like humans.
+What are the main challenges in NLP?
+Challenges include semantics, ambiguity, and contextual understanding.
+What is Named Entity Recognition (NER)?
+NER identifies and classifies entities (e.g., names, dates) in text.
+What is Masked Language Model (MLM)?
+MLMs, like BERT, predict masked words in a sentence, capturing contextual information.
+
+
+why Lstm Rnn not RNN?
+
+RNN (Recurrent Neural Network):
+Imagine you’re reading a sentence word by word. RNNs are like your memory while reading.
+They process sequential data (like sentences, time series, or music) by considering the previous information.
+However, RNNs have a limitation: they struggle with long-term dependencies. They forget earlier context as they read further.
+Think of RNNs as a friend who remembers recent conversations but forgets what you said ages ago.
+LSTM (Long Short-Term Memory):
+LSTMs are like an upgraded version of RNNs.
+They also handle sequential data, but they have a better memory system.
+LSTMs can retain important context over longer periods.
+Picture LSTMs as a friend who not only remembers recent chats but also recalls important details from way back.
+we use this when longer sentences and context is switching like if im talking about my self and in second sentence im talking about my frnd like that and long term dependencys.
+
+what is wordembedding layer in deep learning?
+we can do this with word2vec(words to vector) but in deep learning and neural network we can also do this using tensorlow
+this how we can do first we have sentences
+1.sentence 
+2.one hot encoding 
+3.padding post and pre padding
+4.then this one hot encoded value become vectors.
+
+
+bidirectional lstm?
+Unidirectional LSTM:
+Imagine reading a sentence from left to right (forward direction).
+In a regular LSTM, information flows only in this forward direction.
+It processes the sequence one step at a time, considering the past context.
+Bidirectional LSTM:
+BiLSTM processes data in both directions: forward (left to right) and backward (right to left).
+It consists of two separate LSTM layers:
+One processes the input sequence in the forward direction.
+The other processes it in the reverse direction.
+The outputs from both directions are combined to form the final output.
+This architecture helps the model capture context from both past and future tokens.
+Why Use BiLSTM?:
+Understanding Context:
+BiLSTM can better understand the relationship between sequences.
+For example, consider the word “bank.” In different contexts (e.g., finance vs. river), its meaning changes.
+BiLSTM considers both preceding and following words, improving context understanding.
+
+
+
+what is perpexility?
+In Natural Language Processing (NLP):
+Perplexity is used to evaluate language models.
+Specifically, it measures how well a probability model predicts a sample.
+Lower perplexity indicates better model performance in predicting sequences of words or tokens4.
+In summary, whether in the realm of information theory, everyday language, or NLP, perplexity captures the idea of uncertainty, confusion, or the challenge of prediction.
+
+
+
+
+what is self attention mechanism?
+it captures Dependencies and relationships within the sequences by attending to itself. 
+self attention allows a model to dynamically weigh the importance of different parts of an input.
+
+How Self-Attention Works:
+Given an input sequence (e.g., a sentence), self-attention calculates a weighted sum of all input elements.
+Each element contributes differently based on its relevance to other elements.
+The model learns to focus on important words and ignore irrelevant ones.
+
+Long-Range Dependencies:
+Self-attention helps capture long-range dependencies in sequences.
+It’s especially useful when words far apart influence each other.
+
+Example:
+Consider the sentence: “The cat sat on the mat.”
+Self-attention allows the model to recognize that “cat” and “mat” are related due to their context.
+It assigns higher weights to relevant words during processing.
+
+In summary, self-attention enables models to dynamically determine the relative importance of various words in a sequence, improving their ability to capture context and dependencies!
+
+
+
+what is encoder and decoder?
+An encoder-decoder architecture consists of two main components:
+Encoder: Converts input data into a compact representation (often called a context vector).
+Decoder: Takes the context vector and generates the output sequence.
+These models are widely used in sequence-to-sequence tasks.
+
+use case:
+we can use this for machine translation translate one language to another languages(encoder processes the source language, and the decoder generates the target language.),text summarization(the encoder summaries the input and decpder generates summaires).
+question answering,speech recognization(The encoder processes audio features, and the decoder generates the transcribed text.)
+
+Variable-Length Inputs and Outputs:
+Encoder-decoder models handle sequences of varying lengths.
+They’re not restricted to fixed-size inputs or outputs.
+Capturing Context:
+The encoder summarizes context information from the input sequence.
+The decoder uses this context to generate meaningful output.
+In summary, encoder-decoder models are essential for tasks involving sequences, such as translation, summarization, and question answering. They enable flexible input-output mappings and context-aware processing!
+
+
+
+why transformers is better than lstm ?why we transformers able do paralelle processing ,have long range depencys interpretaibility ?
+Parallel Processing:
+Transformers were designed to allow parallel computation during training.
+Unlike LSTMs, which process sequences sequentially, transformers process entire sentences at once.
+This parallelization significantly reduces training time and improves efficiency1.
+Long-Range Dependencies:
+LSTMs can capture some long-range dependencies, but they struggle with very distant relationships.
+Transformers, on the other hand, excel at handling long-range context dependencies.
+The self-attention mechanism in transformers allows them to consider all words in a sentence simultaneously, regardless of their position.
+This ability to model long-range dependencies is crucial for tasks like machine translation and document summarization12.
+Positional Embeddings:
+Transformers use positional embeddings to encode information about the position of each token in a sentence.
+These embeddings replace the need for recurrence (as in LSTMs) and allow transformers to maintain context without relying on past hidden states.
+Positional embeddings contribute to the model’s ability to handle long-range dependencies1.
+Interpretability:
+LSTMs are more interpretable due to their sequential nature.
+You can trace the flow of information through hidden states step by step.
+Transformers, while less interpretable at the token level, provide interpretability at the attention head level.
+Attention heads allow us to understand which parts of the input contribute most to specific output tokens.
+So, transformers offer a different form of interpretability, albeit at a higher level of abstraction3.
+Overall Performance:
+For large-scale tasks requiring parallelism and capturing complex relationships, transformers shine.
+However, when long-range dependencies are crucial, LSTMs can still be a better choice24.
+
+
+IMPORTANT LEARN ABOUT TRANSFORMERS BERT HOW ITS WORKING HOW ITS MADE HOW CAN U IMPLEMENTED FROM SCRATCH.TRY THIS USING HIGGING FACE MAKE AT LEAST ONE PROJECT ON THIS.
+transformers
+transformers have encoder and ecoder and these encoder and decoder will have many number of encoders and decoders and in one deocder we have self attenton mechanism that is used for capturing the context and have feed forwaed netwrok
+and remeber in transformers we use word2vec Embeddings and in first step its have 3 steps it have three weights and transformers have 512 dimensions bert and gpt.
+like if someone ask why we're choosing 512 dimensions and 64d and why we're chossing them simply say these are just hyperparamters we can also choose 54 d instead of these all are just hyperparameter.
+and in this we do matrix mutilications. IMPORTANT THING TO REMEBER IN THIS WEIGHTS ARE INITIALIZED RANDOMLY LIKE ALSO IN DEEP LEARNING.AND IN BACKPROPGATION WEIGHTS WILL UPDATED 
+in nlp tasks orderings of words are important in transformers how we do it we do it positonl encoding using this we provide some vectors representation suppose we have three words if i calculate
+distance from 1 to 2 it will close using those vectors but f i calculate 1 to 3 it will far from 1 word.that's why we use positional encoding.
+one thing to remember if in one enocder we have self attention and have normalie layers and then feed forward neural network if suppose in hidden layer if some hidden layer is notworking 
+like my 1 hidden layer neural network will pass directly to last one maybe my middle layer is not playing not very good role so ill pass it to last its like dead neuron when we use dropout.and that is called residual connection.
+like we have first encoders in that we have self attntion and we keywords like quires,keys,values then position encoding resudial connection.
+
+AND IN DEOCDER EVRYTHING IS SAME BUT WE HAVE ONE EXTRA THING CALLED ENCODER-DECODER ATTENTION ITS SIMILAR LIKE SELF ATTENTION HERE WE'RE PASSING ENOCDER'S OUTPUT passed into these after passing to this we have passed it to linear and softmax after softmax finally we get output now this ouput again it will pass again to decoder 
+and combine with again incoders output and genrate next word.and again those two words will pass again as input to decoder again it will combine with emcoder's output and it will generate output one by one like if im generatijg answer it will generate response words 1 by one at the end of we'll hve end of sentence..
+
+
+what is serverless archetecture?
+means we have paid llm's like chatgpt,claude3,and serverless acrhictecture like amazone bedrock who can serverless apis for access different diffefent kind of llm's models.
+
+and know about framworks like langchain(KNOW ABOUT LANGSERVE,LANGSMITH JUST GO SEARCH IT.),lamaindex,chainlit see just what's the difference between them.
+
+IMPORTANT DIFFERENT DATABASES
+LIKE VECTOR DATABASES AND NOSQL LIKE MONGODB AND SQL.
+
+KNOW WHAT IS LLMOPS.
+
+
+interview question for genrative ai
+interview for genai
+1. **Fundamental Concepts:**
+  - Can you explain what generative AI is and how it differs from discriminative AI?
+  generative ai
+  Generative models aim to simulate the joint probability distribution of input features and labels.
+  They learn the underlying data distribution to create new samples.
+  Examples include Gaussian Mixture Models (GMMs) and Hidden Markov Models (HMMs).
+  After learning the distribution, they can generate artificial samples that resemble the training set. 
+  
+
+dicriminative ai 
+discrminative ai means normal models that can predict the labels with given input features.
+Discriminative models focus on modeling the conditional probability distribution of labels given input features.
+Examples include Support Vector Machines (SVMs) and logistic regression.
+They estimate the conditional probability of a class given input features.
+Discriminative models do not generate new data; they focus on decision boundaries.4
+
+Generative AI is creative, generates new data, and models the overall distribution.
+Discriminative AI is precise, classifies data, and models conditional probabilities.
+
+
+
+  
+- What are some common algorithms used in generative AI, and how do they work? (e.g., Variational Autoencoders, Generative Adversarial Networks)
+Generative Adversarial Networks (GANs):
+Objective:
+GANs were proposed by Ian Goodfellow in 2014.
+They consist of two neural networks: the generator and the discriminator.
+The generator creates new data samples, while the discriminator verifies whether the data is real or fake.
+Working:
+The generator tries to produce realistic data to fool the discriminator.
+The discriminator learns to distinguish between real and generated data.
+The two networks compete in a minimax game, improving each other iteratively.
+GANs are widely used for image synthesis, style transfer, and data augmentation.
+  
+Variational Autoencoders (VAEs):
+Objective:
+VAEs are probabilistic generative models.
+They learn a latent representation of data.
+Working:
+VAEs consist of an encoder and a decoder.
+The encoder maps input data to a latent space (usually a Gaussian distribution).
+The decoder generates data from the latent space.
+VAEs optimize a variational lower bound to learn meaningful latent representations.
+They are used for image generation, anomaly detection, and latent space exploration.
+  
+Autoregressive Models:
+Objective:
+Autoregressive models generate sequences one element at a time.
+They predict the next element based on the previous ones.
+Working:
+Examples include PixelRNN and WaveNet.
+PixelRNN generates images pixel by pixel.
+WaveNet generates audio waveforms.
+Autoregressive models are computationally expensive due to their sequential nature.
+
+Transformers:
+Objective:
+Transformers, introduced by Vaswani et al. in 2017, revolutionized NLP tasks.
+They use self-attention mechanisms.
+Working:
+Transformers process entire sequences in parallel.
+They capture global context and dependencies.
+BERT, GPT, and T5 are popular transformer-based models.
+They excel in language modeling, translation, and text generation.
+
+
+
+  - How do you evaluate the performance of a generative AI model?
+
+2. **Model Architecture and Training:**
+  - Can you describe the architecture of a typical generative AI model?
+  - What are the key components of a Generative Adversarial Network (GAN)? How does the generator and discriminator interact during training?
+  - How do you handle mode collapse in GAN training?
+  - What techniques can be used to stabilize training in generative models?
+  - What are some common loss functions used in generative AI, and when would you use each?
+
+3. **Practical Experience:**
+  - Can you discuss a project where you implemented a generative AI model? What challenges did you face, and how did you overcome them?
+  - Have you worked with any specific libraries or frameworks for generative AI tasks? Which ones, and what was your experience with them?
+  - How do you preprocess data for training a generative AI model? Are there any specific considerations compared to discriminative models?
+
+4. **Advanced Concepts:**
+  - What are some recent advancements or trends in generative AI research?
+  - Can you explain the concept of "style transfer" in generative models? How is it achieved?
+  - How would you approach the generation of high-resolution images with generative models?
+
+5. **Ethical Considerations:**
+  - What ethical considerations do you think are important when developing or deploying generative AI models?
+  - How would you address potential biases or harmful outputs generated by a generative AI system?
+
+6. **Troubleshooting and Optimization:**
+  - How do you diagnose and troubleshoot issues with a generative AI model's performance?
+  - What strategies would you employ to optimize the performance and efficiency of a generative AI model?
+
+
+  what is the difference between propmt design and prompt engineering?
+prompt design involves instructions and context passed to a language model to achive desired task.
+prompt engineering is the prectice of developing and optimizing prompts to efficient use large language moels for a variety applications.
+    
+what types of large languages models are there?
+1.generic language models this will predict next word (technically token) based on the language on training data
+2.instruction tuned train to predict a response to  the instruction givem in the input. for example summarizer a text.
+3.dialogue tuned Dialog-tuned models are a special case of instruction tuned where requests are typically framed as questions to a chat bot.
+Dialog tuning is expected to be in the context of a longer back and forth conversation, and typically works
+better with natural question-like phrasings. Chain of thought reasoning is the observation that models are better at getting the right
+
+
+there more way of tuning large language models
+like parameter efficient tuning method(PETM) for training llm on ur own custom data withput duplicating the model the base model is not altered
+Instead, a small number of add-on layers are tuned, which can be swapped in and out at inference time  and we can do prompt tuning method
+
+in google we have vertex ai studio leverage in your applications on Google Cloud. Vertex AI Studio helps developers create and deploy generative AI models by
+
+
+GEMINI IS MULTIMODEL IT CAN UNDERSTAND BOTH IMAGES AND TEXTS.
+
+what is vector embeddings?
+𝙀𝙭𝙥𝙡𝙤𝙧𝙞𝙣𝙜 𝙑𝙚𝙘𝙩𝙤𝙧 𝙀𝙢𝙗𝙚𝙙𝙙𝙞𝙣𝙜𝙨 𝙞𝙣 𝙈𝙖𝙘𝙝𝙞𝙣𝙚 𝙇𝙚𝙖𝙧𝙣𝙞𝙣𝙜: 𝘼 𝘾𝙤𝙢𝙥𝙧𝙚𝙝𝙚𝙣𝙨𝙞𝙫𝙚 𝙊𝙫𝙚𝙧𝙫𝙞𝙚𝙬 
+
+Vector embeddings are a fundamental concept in Machine Learning, transforming real-world objects into numerical representations that enable efficient processing and analysis. Let's delve deeper into the realm of vector embeddings and explore 
+
+𝘂𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱𝗶𝗻𝗴 𝗩𝗲𝗰𝘁𝗼𝗿 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+𝗗𝗲𝗳𝗶𝗻𝗶𝘁𝗶𝗼𝗻: Vector embeddings are arrays of real numbers, typically of fixed length, generated by ML models to represent data objects numerically.
+
+𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣: ML models like OpenAI, Cohere, and Google PaLM create vector embeddings that capture semantic relationships between data objects.
+
+𝗦𝗶𝗴𝗻𝗶𝗳𝗶𝗰𝗮𝗻𝗰𝗲 𝗼𝗳 𝗩𝗲𝗰𝘁𝗼𝗿 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+Semantic Similarity: Vectors capture semantic similarity between objects, allowing ML models to understand relationships and make accurate predictions.
+
+𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀 : Used in NLP, recommendation systems, search algorithms, and various ML tasks to enhance performance and enable efficient data processing.
+
+Famous Types of Vector Embeddings:
+
+𝗪𝗼𝗿𝗱 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+Translate individual words into vectors to capture semantic links for tasks like sentiment analysis and language translation.
+
+𝗦𝗲𝗻𝘁𝗲𝗻𝗰𝗲 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+Represent complete sentences as vectors to capture context and meaning for tasks such as sentiment analysis and text categorization.
+
+𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+Capture the overall meaning and content of documents like articles or reports for tasks such as document similarity and recommendation systems.
+
+𝗖𝗿𝗲𝗮𝘁𝗶𝗻𝗴 𝗮𝗻𝗱 𝗨𝘀𝗶𝗻𝗴 𝗩𝗲𝗰𝘁𝗼𝗿 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+Creation: Vector embeddings can be engineered using domain knowledge or trained through models like CNNs to translate objects into vectors.
+
+𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀:
+
+𝗦𝗶𝗺𝗶𝗹𝗮𝗿𝗶𝘁𝘆 𝗦𝗲𝗮𝗿𝗰𝗵: Utilize vector embeddings for tasks like de-duplication, recommendations, anomaly detection, and reverse image search.
+
+𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝘃𝗲 𝗔𝗜: Enhance response generation by leveraging context found in vector embeddings.
+
+𝗦𝘁𝗼𝗿𝗮𝗴𝗲 𝗮𝗻𝗱 𝗥𝗲𝘁𝗿𝗶𝗲𝘃𝗮𝗹 𝗼𝗳 𝗩𝗲𝗰𝘁𝗼𝗿 𝗘𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴𝘀:
+
+𝗩𝗲𝗰𝘁𝗼𝗿 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲𝘀: Specialized databases store vector embeddings efficiently, enabling rapid retrieval and manipulation of high-dimensional data representations.
+
+𝗘𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝗰𝘆: Vector databases provide specific efficiencies for storing and retrieving vector embeddings at scale for various ML applications.
+
