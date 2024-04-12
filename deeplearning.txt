@@ -798,3 +798,31 @@ Creation: Vector embeddings can be engineered using domain knowledge or trained 
 
 𝗘𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝗰𝘆: Vector databases provide specific efficiencies for storing and retrieving vector embeddings at scale for various ML applications.
 
+
+
+what is the difference between similarity_search and retrival relevent document?
+Similarity Search:
+Purpose: Similarity search aims to find items (documents, vectors, or data points) that are most similar to a given query item.
+Methodology:
+It calculates the similarity (often using cosine similarity) between the query and each item in the database.
+The items with the highest similarity scores are considered relevant.
+Use Cases:
+When you want to find items that closely match a specific query.
+Commonly used in recommendation systems, content-based filtering, and information retrieval.
+Example: Finding similar articles based on the content of a given news article.
+Retrieve Relevant Documents:
+Purpose: Retrieving relevant documents focuses on returning a set of documents that are relevant to a user’s query.
+Methodology:
+It considers the user’s query and retrieves documents that contain relevant information.
+The relevance is determined based on the query’s context and the content of the documents.
+Use Cases:
+When you want to provide relevant information to a user based on their query.
+Commonly used in search engines, chatbots, and question-answering systems.
+Example: Retrieving relevant research papers related to a specific topic.
+When to Use Each:
+Similarity Search:
+Use similarity search when you need to find items that are conceptually similar to a given query.
+Useful for exploring related content, clustering, and identifying similar patterns.
+Retrieve Relevant Documents:
+Use document retrieval when you want to provide contextually relevant information to users.
+Ideal for answering user queries, summarization, and content recommendation.
